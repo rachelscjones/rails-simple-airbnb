@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="display-4">All our flats</h1>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @flats.each do |flat| %>
+      <div class="col">
+        <div class="card h-100">
+        <img src="https://picsum.photos/seed/picsum/60/40" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> <%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <p class="card-text"><i class="fa-solid fa-people-group"></i> <%= flat.number_of_guests %></p>
+            <p class="card-text">£<%= flat.price_per_night %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
